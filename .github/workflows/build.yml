@@ -129,7 +129,7 @@ jobs:
           $bundleDir = Join-Path $outDir "dmdext-v$version-${{ matrix.platform }}"
           New-Item -ItemType Directory -Force -Path $bundleDir | Out-Null
 
-          # Core binaries/config
+          # Core binaries/config.
           Copy-Item "$env:GITHUB_WORKSPACE\Console\bin\${{ matrix.platform }}\${{ matrix.configuration }}\dmdext.exe"         -Destination $bundleDir -Force
           Copy-Item "$env:GITHUB_WORKSPACE\Console\bin\${{ matrix.platform }}\${{ matrix.configuration }}\dmdext.log.config"  -Destination $bundleDir -Force
           Copy-Item "$env:GITHUB_WORKSPACE\Console\ProPinballSlave.bat"                                                      -Destination $bundleDir -Force

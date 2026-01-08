@@ -134,7 +134,7 @@ jobs:
           Copy-Item "$env:GITHUB_WORKSPACE\Console\bin\${{ matrix.platform }}\${{ matrix.configuration }}\dmdext.log.config"  -Destination $bundleDir -Force
           Copy-Item "$env:GITHUB_WORKSPACE\Console\ProPinballSlave.bat"                                                      -Destination $bundleDir -Force
 
-          # PinMAME device bits
+          # PinMAME device bits.
           $dllSuffix = if ('${{ matrix.platform }}' -eq 'x64') { '64' } else { '' }
           Copy-Item "$env:GITHUB_WORKSPACE\PinMameDevice\bin\${{ matrix.platform }}\${{ matrix.configuration }}\DmdDevice$dllSuffix.dll" -Destination $bundleDir -Force
           Copy-Item "$env:GITHUB_WORKSPACE\PinMameDevice\bin\${{ matrix.platform }}\${{ matrix.configuration }}\DmdDevice.log.config"    -Destination $bundleDir -Force

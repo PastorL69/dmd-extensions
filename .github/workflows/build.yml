@@ -190,5 +190,3 @@ jobs:
           path: ${{ github.workspace }}\Installer\Builds\dmdext-v${{ steps.set_version.outputs.version }}-${{ matrix.platform }}.msi
           retention-days: 90
           if-no-files-found: error
-build.yml
-10 KB

@@ -10,7 +10,7 @@ namespace LibDmd.Output.ZeDMD
 	public class ZeDMDHD : ZeDMDUsbBase, IRgb24Destination, IRgb565Destination, IFixedSizeDestination
 	{
 		public override string Name => "ZeDMD HD";
-		public virtual Dimensions FixedSize { get; } = new Dimensions(256, 64);
+		public virtual Dimensions FixedSize { get; } = new Dimensions(192, 64);
 		public virtual bool DmdAllowHdScaling { get; } = true;
 
 		private static ZeDMDHD _instance;
